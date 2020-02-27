@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "UTF-8">
+      <title>File System</title>
+      
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+         <script src="https://kit.fontawesome.com/a076d05399.js"></script>   
+         <script>
+         $(document).ready(function(){
+         $(".nav-tabs a").click(function(){
+            $(this).tab('show');
+         });
+         });
+         </script>  
+   </head>   
+   <body>
+   <h2 class="display-4 far fa-handshake">Let's start by getting to know you...</h2>
+   <br>
+   
+   <div class="container mt-3"> 
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs">
+         <li class="nav-item">
+            <a class="nav-link active " data-toggle="tab" href="#wages">Wages & Income</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#Credits">Deduction & Credits</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#health">Health Insurance</a>
+         </li>
+      </ul>
+      <!-- Tab panes -->
+        <!-- Tab panes -->
+      <div class="tab-content">       
+         <div id="wages" class="container tab-pane active"><br>     
+         <p class="lead">We just need a few details to get us rolling.</p>         
+            <div class="input-group mb-3">
+               <div class="input-group-pretend">
+                  <span class="input-group-text">Person</span>
+               </div>
+               <input type = "text" class="form-control" name = "FirstName" value = "" id = "FirstName" 
+                     placeholder = "First Name"  required>                     
+               <input type = "text" class="form-control" name = "LastName" value = "" id = "LastName" 
+                     placeholder = "Last Name"  required>                           
+            </div>      
+            <div class="input-group mb-3">
+               <span class="input-group-text">Date of Birth</span>
+               <input type = "text" class="form-control" name = "DateOfBirth" value = "" id = "DateOfBirth"          
+                  placeholder = "MM/DD/YYY" data-provide="datepicker"  required>
+         
+               <span class="input-group-text">Zip Code</span>
+               <input type = "text" class="form-control" name = "ZipCode" value = "" id = "ZipCode" 
+                  placeholder = "Zip Code"  required>
+            </div>
+            <div class = "lead">
+               <button class = "btn btn-info" role="button" id = "continue">Continue</button>
+            </div>       
+            <script src = "./view.js" ></script>
+            <span id = "contact-list"></span>
+         </div>
+         <div id="Credits" class="container tab-pane fade"><br>
+         <h3>Deduction & Credits</h3>
+         <p>Please give us information about your donations.</p>        
+         </div>
+         <div id="health" class="container tab-pane fade"><br>
+         <h3>Health Insurance</h3>
+         <p>Who is your Health Insurance Provider.</p>
+        </div>
+      </div>
+   </body>
+</html>
